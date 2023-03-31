@@ -39,7 +39,7 @@ unsigned int nCurvas;
 
 Poligono PoligonoDeControle;
 
-// Limites l—gicos da ‡rea de desenho
+// Limites lÃ³gicos da Ã¡rea de desenho
 Ponto Min, Max;
 
 bool desenha = false;
@@ -61,7 +61,7 @@ void animate() {
     TempoTotal += dt;
     nFrames++;
     
-    if (AccumDeltaT > 1.0 / 30) // fixa a atualiza‹o da tela em 30
+    if (AccumDeltaT > 1.0 / 30) // fixa a atualizaÃ§Ã£o da tela em 30
     {
         AccumDeltaT = 0;
         angulo += 2;
@@ -164,7 +164,7 @@ void display(void) {
     // Limpa a tela coma cor de fundo
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // Define os limites lógicos da área OpenGL dentro da Janela
+    // Define os limites lÃ›gicos da Â·rea OpenGL dentro da Janela
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
@@ -329,41 +329,41 @@ int main(int argc, char ** argv) {
     glutInitWindowSize(650, 500);
     
     // Cria a janela na tela, definindo o nome da
-    // que aparecera na barra de título da janela.
+    // que aparecera na barra de tÃŒtulo da janela.
     glutCreateWindow("Animacao com Bezier");
     
-    // executa algumas inicializações
+    // executa algumas inicializaÃÄ±es
     init();
     
     // Define que o tratador de evento para
     // o redesenho da tela. A funcao "display"
-    // será chamada automaticamente quando
-    // for necessário redesenhar a janela
+    // serÂ· chamada automaticamente quando
+    // for necessÂ·rio redesenhar a janela
     glutDisplayFunc(display);
     
     // Define que o tratador de evento para
-    // o invalida‹o da tela. A funcao "display"
-    // será chamada automaticamente sempre que a
-    // m‡quina estiver ociosa (idle)
+    // o invalidaÃ§Ã£o da tela. A funcao "display"
+    // serÂ· chamada automaticamente sempre que a
+    // mÃ¡quina estiver ociosa (idle)
     glutIdleFunc(animate);
     
     // Define que o tratador de evento para
     // o redimensionamento da janela. A funcao "reshape"
-    // será chamada automaticamente quando
-    // o usuário alterar o tamanho da janela
+    // serÂ· chamada automaticamente quando
+    // o usuÂ·rio alterar o tamanho da janela
     glutReshapeFunc(reshape);
     
     // Define que o tratador de evento para
     // as teclas. A funcao "keyboard"
-    // será chamada automaticamente sempre
-    // o usuário pressionar uma tecla comum
+    // serÂ· chamada automaticamente sempre
+    // o usuÂ·rio pressionar uma tecla comum
     glutKeyboardFunc(keyboard);
     
     // Define que o tratador de evento para
     // as teclas especiais(F1, F2,... ALT-A,
     // ALT-B, Teclas de Seta, ...).
-    // A funcao "arrow_keys" será chamada
-    // automaticamente sempre o usuário
+    // A funcao "arrow_keys" serÂ· chamada
+    // automaticamente sempre o usuÂ·rio
     // pressionar uma tecla especial
     glutSpecialFunc(arrow_keys);
     glutMouseFunc(Mouse);
